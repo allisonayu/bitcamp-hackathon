@@ -1,5 +1,5 @@
 import React from 'react'
-import imageHome from '/workspaces/bitcamp-hackathon/my-react-app/res/grocery icons/home (1).png'
+import imageHome from 'C:/Users/allis/OneDrive/Documents/bitcamp-2025/my-react-app/res/grocery icons/home.png'
 import './Home.css'
 
 function Home() {

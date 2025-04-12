@@ -15,6 +15,12 @@
     color: #945247;
   }
   
+  .logo-image {
+    height: 2rem;
+    width: auto;
+    margin-right: 8px;
+  }
+
   .nav-links {
     display: flex;
     justify-content: center;
