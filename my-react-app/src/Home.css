@@ -38,4 +38,13 @@
     background-color: #f3bebe;
     color: #b91c1c;
   }
+
+  .my-photo {
+    position: absolute;
+    top: 608px;
+    left: 630px;
+    transform: translate(-50%, -50%);
+    width: 1920px; /* or whatever size */
+    height: 1080px;
+  }
   
