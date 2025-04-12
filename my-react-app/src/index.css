@@ -1,50 +1,13 @@
-:root {
-  --color4: #945247; /*border color*/
-  --color2: #f9eabe; /*navbar*/
-  --color3: #f9dfbf; /*buttons/staging area*/
-  --color4: #f7f8ca; /*background color*/
-  --font: 'Gaegu';
+* {
+  box-sizing: border-box;
 }
 
-body {
+html, body {
   margin: 0;
-}
-
-.app {
-  margin: 0 auto;
   padding: 0;
-  font-family: var(--font);
-}
-
-.navbar {
-  background-color: var(--color2);
-  font-family: var(--font);
-  text-align: center;
-  margin: 0;
-  width: 100%;
-  position: fixed;
-  /*horizontal offset vertical offset blur radius color of shadow*/
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin: 0;
-}
-
-.navbar li {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.navbar a:hover {
-  background-color: var(--color3);
-}
-
-.navbar a {
-  color: var(--color1);
-  text-decoration: none;
-  padding: 1rem;
+  font-family: 'Gaegu', sans-serif;
+  background-color: #f7f8ca;
+  min-height: 100vh;
+  color: #4b5563;
+  overflow-x: hidden;
 }

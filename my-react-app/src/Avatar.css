@@ -1,0 +1,41 @@
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+    width: 100%;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #b45309;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4b5563;
+  }
+  
+  .button-wrapper {
+    text-align: right;
+    margin-top: 1.5rem;
+  }
+  
+  button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 999px;
+    border: none;
+    background-color: #fcd34d;
+    color: #4b5563;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #f3bebe;
+    color: #b91c1c;
+  }
+  
