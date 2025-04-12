@@ -1,4 +1,4 @@
-# Welcome to Buttercup Corner!
+# 🌻 Welcome to Buttercup Corner! 🌻
 
 
 ## Project Description
@@ -6,4 +6,4 @@ Our website, Buttercup Corner, enables users to design and output a food-themed 
 
 
 ## Tools, Libraries, & Languages
-Our project implements React, specifically Vite React. The frontend is programmed in TypeScript, CSS, and HTML. The avatar characteristics were drawn on Procreate.
+Our project implements React, specifically Vite React. The frontend is programmed in TypeScript, CSS, and HTML. The avatar characteristics, logo, and home page were drawn on Procreate.
