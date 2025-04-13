@@ -35,6 +35,8 @@ import smile from '/res/grocery icons/mouth/smile.png';
 import straight from '/res/grocery icons/mouth/straight.png';
 import tongue from '/res/grocery icons/mouth/tongue.png';
 
+import alleyes from '/res/grocery icons/all_eyes.png';
+
 const bodyOptions = [
   { label: 'banana', img: banana },
   { label: 'blueberry', img: blueberry },
