@@ -144,14 +144,15 @@ function Avatar() {
           <img src={tongue} style={{width:mouthsize, height:mouthsize}}></img>
       </ul>
 
-      <p>Your Avatar!</p>
-      <ul>
-          <img src={body} style={{width:avatarsize, height:avatarsize}}></img>
-          <img src={eye} style={{width:avatarsize, height:avatarsize}}></img>
-          <img src={mouth} style={{width:avatarsize, height:avatarsize}}></img>
+        <p>Your Avatar!</p>
+        <div className="avatar-wrapper">
+            {body && <img className="body" src={body} alt="body layer" />}
+            {eye && <img className="eye" src={eye} alt="eye layer" />}
+            {mouth && <img className="mouth" src={mouth} alt="mouth layer" />}
+        </div>
 
-      </ul>
   </div>
+  
   )
 }
 
