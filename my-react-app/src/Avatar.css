@@ -8,6 +8,7 @@
   h1 {
     font-size: 2rem;
     color: #b45309;
+    margin-top: 5rem;
     margin-bottom: 1rem;
   }
   
@@ -28,14 +29,14 @@
     border-radius: 999px;
     border: none;
     background-color: #fcd34d;
-    color: #4b5563;
+    color: #945247;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
   }
   
   button:hover {
-    background-color: #f3bebe;
-    color: #b91c1c;
+    background-color: #ffd19c;
+    color: #945247;
   }
   
