@@ -36,6 +36,7 @@ import straight from '/res/grocery icons/mouth/straight.png';
 import tongue from '/res/grocery icons/mouth/tongue.png';
 
 import alleyes from '/res/grocery icons/all_eyes.png';
+import mouth from 'res/grocery icons/mouth.png';
 
 const bodyOptions = [
   { label: 'banana', img: banana },
