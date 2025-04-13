@@ -1,6 +1,6 @@
 import React from 'react'
 import './Home.css'
-import imageHome from 'C:/Users/allis/OneDrive/Documents/bitcamp-2025/my-react-app/res/grocery icons/home.png'
+import imageHome from '/workspaces/bitcamp-hackathon/my-react-app/res/grocery icons/home.png'
 import { Link } from 'react-router-dom'
 
 function Home() {
