@@ -87,12 +87,14 @@ function Avatar() {
       <AvatarPartSelector title="Eyes" options={eyeOptions} onSelect={setEye} previewSize={400} />
       <AvatarPartSelector title="Mouth" options={mouthOptions} onSelect={setMouth} previewSize={400} />
 
-      <h2>Your Avatar!</h2>
-      <div className="avatar-final">
-        {body && <img src={body} style={{ width: avatarsize, height: avatarsize }} />}
-        {eye && <img src={eye} style={{ width: avatarsize, height: avatarsize }} />}
-        {mouth && <img src={mouth} style={{ width: avatarsize, height: avatarsize }} />}
-      </div>
+    <h2>Your Avatar!</h2>
+    <div className="center-screen">
+    <div className="avatar-final">
+        {body && <img className="body" src={body} alt="body layer" />}
+        {eye && <img className="eye" src={eye} alt="eye layer" />}
+        {mouth && <img className="mouth" src={mouth} alt="mouth layer" />}
+    </div>
+    </div>
     </div>
   );
 }

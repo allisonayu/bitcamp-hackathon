@@ -52,20 +52,22 @@
     color: #945247;
   }
 
-  .avatar-wrapper {
+  .avatar-final {
     position: relative;
     width: 400px; /* or whatever size fits your design */
     height: 400px;
     margin-top: 20px;
+    text-align: center;
   }
   
-  .avatar-wrapper img {
+  .avatar-final img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: contain;
+    text-align: center;
     pointer-events: none; /* optional: disables mouse clicks on layers */
   }
 
@@ -73,7 +75,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 500; /* Adjust based on how much vertical space you want */
+    min-height: 20vh; /* Adjust based on how much vertical space you want */
   }
+
+  
+
   
   
