@@ -1,6 +1,7 @@
 import React from 'react'
 import './Home.css'
 import imageHome from 'C:/Users/allis/OneDrive/Documents/bitcamp-2025/my-react-app/res/grocery icons/home.png'
+import { Link } from 'react-router-dom'
 
 function Home() {
   return (
@@ -9,6 +10,10 @@ function Home() {
       style={{ backgroundImage: `url(${imageHome})` }}
     >
       <h1>Welcome to Buttercup Corner</h1>
+      <p>Create your own food-themed friend!</p>
+      <div className="nav-links">
+        <Link to="/avatar">✨ START DESIGNING ✨</Link>
+      </div>
     </div>
   )
 }
