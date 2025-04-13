@@ -1,158 +1,100 @@
-import React from 'react'
-import {useState} from 'react'
-import './Avatar.css'
+import React, { useState } from 'react';
+import './Avatar.css';
+import AvatarPartSelector from './AvatarPartSelector.tsx';
 
-//import { getImages } from './imageImports';
+// 🟡 Body image imports
+import banana from '/res/grocery icons/body/banana.png';
+import blueberry from '/res/grocery icons/body/blueberry.png';
+import bokchoy from '/res/grocery icons/body/bokchoy.png';
+import broccoli from '/res/grocery icons/body/broccoli.png';
+import carrot from '/res/grocery icons/body/carrot.png';
+import friedegg from '/res/grocery icons/body/fried_egg.png';
+import orange from '/res/grocery icons/body/orange.png';
+import peach from '/res/grocery icons/body/peach.png';
+import potato from '/res/grocery icons/body/potato.png';
+import strawberry from '/res/grocery icons/body/strawberry.png';
+import tomato from '/res/grocery icons/body/tomato.png';
+import turnip from '/res/grocery icons/body/turnip.png';
 
-//Body
-import banana from '/res/grocery icons/body/banana.png'
-import blueberry from '/res/grocery icons/body/blueberry.png'
-import bokchoy from '/res/grocery icons/body/bokchoy.png'
-import broccoli from '/res/grocery icons/body/broccoli.png'
-import carrot from '/res/grocery icons/body/carrot.png'
-import friedegg from '/res/grocery icons/body/fried_egg.png'
-import orange from '/res/grocery icons/body/orange.png'
-import peach from '/res/grocery icons/body/peach.png'
-import potato from '/res/grocery icons/body/potato.png'
-import strawberry from '/res/grocery icons/body/strawberry.png'
-import tomato from '/res/grocery icons/body/tomato.png'
-import turnip from '/res/grocery icons/body/turnip.png'
+// 🟡 Eye image imports
+import angry from '/res/grocery icons/eyes/angry.png';
+import blush from '/res/grocery icons/eyes/blush.png';
+import cry from '/res/grocery icons/eyes/cry.png';
+import dead from '/res/grocery icons/eyes/dead.png';
+import dilated from '/res/grocery icons/eyes/dilated.png';
+import eyesmile from '/res/grocery icons/eyes/eye_smile.png';
+import lashes from '/res/grocery icons/eyes/lashes.png';
+import regular from '/res/grocery icons/eyes/regular.png';
+import silly from '/res/grocery icons/eyes/silly.png';
 
-//Eyes
-import angry from '/res/grocery icons/eyes/angry.png'
-import blush from '/res/grocery icons/eyes/blush.png'
-import cry from '/res/grocery icons/eyes/cry.png'
-import dead from '/res/grocery icons/eyes/dead.png'
-import dilated from '/res/grocery icons/eyes/dilated.png'
-import eyesmile from '/res/grocery icons/eyes/eye_smile.png'
-import lashes from '/res/grocery icons/eyes/lashes.png'
-import regular from '/res/grocery icons/eyes/regular.png'
-import silly from '/res/grocery icons/eyes/silly.png'
+// 🟡 Mouth image imports
+import frown from '/res/grocery icons/mouth/frown.png';
+import open from '/res/grocery icons/mouth/open.png';
+import sidetongue from '/res/grocery icons/mouth/side_tongue.png';
+import smile from '/res/grocery icons/mouth/smile.png';
+import straight from '/res/grocery icons/mouth/straight.png';
+import tongue from '/res/grocery icons/mouth/tongue.png';
 
-//Mouth
-import frown from '/res/grocery icons/mouth/frown.png'
-import open from '/res/grocery icons/mouth/open.png'
-import sidetongue from '/res/grocery icons/mouth/side_tongue.png'
-import smile from '/res/grocery icons/mouth/smile.png'
-import straight from '/res/grocery icons/mouth/straight.png'
-import tongue from '/res/grocery icons/mouth/tongue.png'
+const bodyOptions = [
+  { label: 'banana', img: banana },
+  { label: 'blueberry', img: blueberry },
+  { label: 'bokchoy', img: bokchoy },
+  { label: 'broccoli', img: broccoli },
+  { label: 'carrot', img: carrot },
+  { label: 'fried egg', img: friedegg },
+  { label: 'orange', img: orange },
+  { label: 'peach', img: peach },
+  { label: 'potato', img: potato },
+  { label: 'strawberry', img: strawberry },
+  { label: 'tomato', img: tomato },
+  { label: 'turnip', img: turnip },
+];
 
-var bodysize = 200;
-var eyesize = 400;
-var mouthsize = 400;
-var avatarsize = 600;
-var test = 1;
+const eyeOptions = [
+  { label: 'angry', img: angry },
+  { label: 'blush', img: blush },
+  { label: 'cry', img: cry },
+  { label: 'dead', img: dead },
+  { label: 'dilated', img: dilated },
+  { label: 'eye smile', img: eyesmile },
+  { label: 'lashes', img: lashes },
+  { label: 'regular', img: regular },
+  { label: 'silly', img: silly },
+];
 
+const mouthOptions = [
+  { label: 'frown', img: frown },
+  { label: 'open', img: open },
+  { label: 'side tongue', img: sidetongue },
+  { label: 'smile', img: smile },
+  { label: 'straight', img: straight },
+  { label: 'tongue', img: tongue },
+];
 
-//const[eyeIndex, setEyeIndex] = useState({});
-//var eyeIndex = 0;
+const avatarsize = 600;
 
 function Avatar() {
-    const[body, setBody] = useState('');
-    const[eye, setEye] = useState('');
-    const[mouth, setMouth] = useState('');
-    const[ghostbody, setGhostBody] = useState(true);
-    const[ghosteye, setGhostEye] = useState(true);
-    const[ghostmouth, setGhostMouth] = useState(true);
-
-    if(body.length == 0){
-        () => setGhostBody(false);
-    }
-    if(eye.length == 0){
-        () => setGhostEye(false);
-    }
-    if(mouth.length == 0){
-        () => setGhostMouth(false);
-    }
+  const [body, setBody] = useState('');
+  const [eye, setEye] = useState('');
+  const [mouth, setMouth] = useState('');
 
   return (
     <div className="container">
       <h1>Avatar Page</h1>
       <p>Design and customize your food avatar here!</p>
 
-      <p><>pick your produce</></p>
-      <ul>
-          <button onClick={() => setBody(banana)}>banana</button>
-          <button onClick={() => setBody(blueberry)}>blueberry</button>
-          <button onClick={() => setBody(bokchoy)}>bokchoy</button>
-          <button onClick={() => setBody(broccoli)}>broccoli</button>
-          <button onClick={() => setBody(carrot)}>carrot</button>
-          <button onClick={() => setBody(friedegg)}>fried egg</button>
-      </ul>
-      <ul>
-          <button onClick={() => setBody(orange)}>orange</button>
-          <button onClick={() => setBody(peach)}>peach</button>
-          <button onClick={() => setBody(potato)}>potato</button>
-          <button onClick={() => setBody(strawberry)}>strawberry</button>
-          <button onClick={() => setBody(tomato)}>tomato</button>
-          <button onClick={() => setBody(turnip)}>turnip</button>   
-      </ul>
-      <ul>
-          <img src={banana} style={{width: bodysize, height: bodysize}}></img>
-          <img src={blueberry} style={{width: bodysize, height: bodysize}}></img>
-          <img src={bokchoy} style={{width: bodysize, height: bodysize}}></img>
-          <img src={broccoli} style={{width: bodysize, height: bodysize}}></img>
-          <img src={carrot} style={{width: bodysize, height: bodysize}}></img>
-          <img src={friedegg} style={{width: bodysize, height: bodysize}}></img>
-          <img src={orange} style={{width: bodysize, height: bodysize}}></img>
-          <img src={peach} style={{width: bodysize, height:bodysize}}></img>
-          <img src={potato} style={{width: bodysize, height: bodysize}}></img>
-          <img src={strawberry} style={{width: bodysize, height: bodysize}}></img>
-          <img src={tomato} style={{width: bodysize, height: bodysize}}></img>
-          <img src={turnip} style={{width: bodysize, height: bodysize}}></img>
-      </ul>
+      <AvatarPartSelector title="Pick your produce" options={bodyOptions} onSelect={setBody} previewSize={200} />
+      <AvatarPartSelector title="Eyes" options={eyeOptions} onSelect={setEye} previewSize={400} />
+      <AvatarPartSelector title="Mouth" options={mouthOptions} onSelect={setMouth} previewSize={400} />
 
-      <p><>eyes</></p>
-      <ul>
-          <button onClick={() => setEye(angry)}>angry</button>
-          <button onClick={() => setEye(blush)}>blush</button>
-          <button onClick={() => setEye(cry)}>cry</button>
-          <button onClick={() => setEye(dead)}>dead</button>
-          <button onClick={() => setEye(dilated)}>dilated</button>
-          <button onClick={() => setEye(eyesmile)}>eye smile</button>
-          <button onClick={() => setEye(lashes)}>lashes</button>
-          <button onClick={() => setEye(regular)}>regular</button>
-          <button onClick={() => setEye(silly)}>silly</button>
-      </ul>
-      <ul>
-          <img src={angry} style={{width: eyesize, height: eyesize}}></img>
-          <img src={blush} style={{width:eyesize, height:eyesize}}></img>
-          <img src={cry} style={{width:eyesize, height:eyesize}}></img>
-          <img src={dead} style={{width:eyesize, height:eyesize}}></img>
-          <img src={dilated} style={{width:eyesize, height:eyesize}}></img>
-          <img src={eyesmile} style={{width:eyesize, height:eyesize}}></img>
-          <img src={lashes} style={{width:eyesize, height:eyesize}}></img>
-          <img src={regular} style={{width:eyesize, height:eyesize}}></img>
-          <img src={silly} style={{width:eyesize, height:eyesize}}></img>
-      </ul>
-
-      <p><>mouth</></p>
-      <ul>
-          <button onClick={() => setMouth(frown)}>frown</button>
-          <button onClick={() => setMouth(open)}>open</button>
-          <button onClick={() => setMouth(sidetongue)}>side tongue</button>
-          <button onClick={() => setMouth(smile)}>smile</button>
-          <button onClick={() => setMouth(straight)}>straight</button>
-          <button onClick={() => setMouth(tongue)}>tongue</button>
-      </ul>
-      <ul>
-          <img src={frown} style={{width:mouthsize, height:mouthsize}}></img>
-          <img src={open} style={{width:mouthsize, height:mouthsize}}></img>
-          <img src={sidetongue} style={{width:mouthsize, height:mouthsize}}></img>
-          <img src={smile} style={{width:mouthsize, height:mouthsize}}></img>
-          <img src={straight} style={{width:mouthsize, height:mouthsize}}></img>
-          <img src={tongue} style={{width:mouthsize, height:mouthsize}}></img>
-      </ul>
-
-      <p>Your Avatar!</p>
-      <ul>
-          <img src={body} style={{width:avatarsize, height:avatarsize}}></img>
-          <img src={eye} style={{width:avatarsize, height:avatarsize}}></img>
-          <img src={mouth} style={{width:avatarsize, height:avatarsize}}></img>
-
-      </ul>
-  </div>
-  )
+      <h2>Your Avatar!</h2>
+      <div className="avatar-final">
+        {body && <img src={body} style={{ width: avatarsize, height: avatarsize }} />}
+        {eye && <img src={eye} style={{ width: avatarsize, height: avatarsize }} />}
+        {mouth && <img src={mouth} style={{ width: avatarsize, height: avatarsize }} />}
+      </div>
+    </div>
+  );
 }
 
-export default Avatar
+export default Avatar;
