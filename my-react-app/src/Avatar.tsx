@@ -80,7 +80,7 @@ function Avatar() {
 
   return (
     <div className="container">
-      <h1>Avatar Page</h1>
+      <h1>🌻 Design Your Avatar 🌻</h1>
       <p>Design and customize your food avatar here!</p>
 
       <AvatarPartSelector title="Pick your produce" options={bodyOptions} onSelect={setBody} previewSize={200} />
