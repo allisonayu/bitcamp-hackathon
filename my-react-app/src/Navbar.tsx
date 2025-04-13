@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
-import logo from '/workspaces/bitcamp-hackathon/my-react-app/res/grocery icons/logo.png'
+import logo from '/res/grocery icons/logo.png'
 
 function Navbar() {
   return (
