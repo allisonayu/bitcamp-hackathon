@@ -9,3 +9,5 @@ Our website, Buttercup Corner, enables users to design and output a food-themed 
 Our project implements React, specifically Vite React. The frontend is programmed in TypeScript, CSS, and HTML. The avatar characteristics, logo, and home page were drawn on Procreate.
 
 ![Screenshot of Buttercup Corner Homepage](./my-react-app/screenshots/homepage_screenshot.png)
+![Screenshot of Avatar Design Page](./my-react-app/screenshots/design_screenshot.png)
+![Screenshot of Avatar](./my-react-app/screenshots/avatar_screenshot.png)
